@@ -45,10 +45,10 @@ This invoice system allows creating invoices, paying invoices, and processing ov
   - Description: Should process all pending invoices that are overdue. Scenarios with status as pending or void, a new invoice would be created with the late amount and the new overdue date.
   - Request Body:
     ```json
-   {
-    "late_fee": 10.5,
+    {
+     "late_fee": 10.5,
     "overdue_days": 10
-   }
+    }
     ```
   - Example:
      POST http://localhost:8080/invoices/process-overdue
