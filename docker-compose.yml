@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: myapp:latest
+    container_name: myapi-container
+    ports:
+      - "8080:8080"  # Expose the app's port (in this case, 8080)
+    networks:
+      - app-network
+    restart: always  # Automatically restart the container on failure
+
+networks:
+  app-network:
+    driver: bridge
